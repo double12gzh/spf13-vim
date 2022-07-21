@@ -1,0 +1,343 @@
+" Global {
+    syntax enable
+    "colorscheme dracula
+    "colorscheme neodark
+    colorscheme Atelier_EstuaryLight
+
+    let mapleader = ","
+    let &t_TI = ""
+    let &t_TE = ""
+
+    let g:indent_guides_enable_on_vim_startup = 0
+    let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_smart_case = 1
+
+    filetype off
+
+	set encoding=utf-8
+	set nocompatible                                                    " explicitly get out of vi-compatible mode
+	set termencoding=utf-8
+	set fileencodings=utf-8,gbk,latin1
+    set cscopetag
+	set ruler                                                           " Show ruler
+	set number                                                          " Line numbers are good
+	set backspace=indent,eol,start                                      " Allow backspace in insert mode
+	set history=1000                                                    " Store lots of :cmdline history
+	set showcmd                                                         " Show incomplete cmds down the bottom
+	set showmode                                                        " Show current mode down the bottom
+	set gcr=a:blinkon0                                                  " Disable cursor blink
+	set novisualbell                                                    " No sounds
+	set noerrorbells                                                    " No noise
+	set t_vb=
+	set tm=500
+	set autoread                                                        " Reload files changed outside vim
+	set showmatch                                                       " Show matching brackets
+	set laststatus=2                                                    " Always show status line
+	set t_Co=256                                                        " As I use dark background in mac, I also can use this colorscheme on mac
+	set nobackup
+	set nowb
+	set list listchars=tab:\ \ ,trail:·                                 " Display tabs and trailing spaces visually
+	set linebreak                                                       " Wrap lines at convenient points
+	set mouse=v
+	set ts=4
+	set ignorecase
+	set nobackup
+	set nowb
+	set noswapfile
+	set belloff=all
+    set incsearch                                                       " Find the next match as we type the search
+    set hlsearch                                                        " Hilight searches by default
+    set viminfo='100,f1                                                 " Save up to 100 marks, enable capital marks
+    set autoindent
+    set smartindent
+    set smarttab
+    set shiftwidth=4
+    set softtabstop=4
+    set tabstop=4
+    set expandtab
+    set incsearch
+    set foldmethod=indent                                               " fold based on indent
+    set foldnestmax=3                                                   " deepest fold is 3 levels
+    set nofoldenable                                                    " dont fold by default
+	set iskeyword-=.
+" }
+
+" ALE {
+	let g:ale_linters_explicit = 1 " 除g:ale_linters指定，其他不可用
+	let g:ale_linters = {
+        \   'cpp': ['cppcheck','clang','gcc'],
+        \   'c': ['cppcheck','clang', 'gcc'],
+        \   'python': ['pylint'],
+        \   'bash': ['shellcheck'],
+        \   'go': ['golint'],
+    \}
+    let g:ale_sign_column_always = 1
+    let g:ale_completion_delay = 500
+    let g:ale_echo_delay = 20 
+    let g:ale_lint_delay = 500
+    let g:ale_echo_msg_format = '[%linter%] %code: %%s' 
+    let g:ale_lint_on_text_changed = 'normal' 
+    let g:ale_lint_on_insert_leave = 1
+    let g:airline#extensions#ale#enabled = 1
+    let g:ale_set_quickfix = 1
+    let g:ale_open_list = 1                                        " 打开quitfix对话框
+    let g:ale_set_loclist = 0
+    let g:ale_list_vertical = 0
+    let g:ale_keep_list_window_open = 1
+    let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+    let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14' 
+    let g:ale_c_cppcheck_options = ''
+    let g:ale_cpp_cppcheck_options = ''
+    "let g:ale_sign_error = 'e'
+    let g:ale_sign_warning = 'w'
+    let g:ale_sign_error = '✗'
+    "let g:ale_sign_warning = '⚡'
+" }
+
+" Sinify {
+    set signcolumn=yes
+" }
+
+" Key Map {
+    map <F2> :NERDTreeToggle<CR>
+    map <F3> :TagbarToggle<CR>
+    map <F4> :CtrlPMixed<CR>
+    map <F6> :Ag<CR>
+    map <F7> :FZF<CR>
+    map <F9> ::ALEToggle<CR>
+    map <F10> ::SignifyDiff<CR>
+    map <F11> :UndotreeToggle<CR>
+    map <F12> :Flake8<CR>
+
+    " Movement
+    " bind Ctrl + <movement> keys to move around the windows,
+    " instead of using Ctrl + w + <movement>
+    map <c-j> <c-w>j
+    map <c-k> <c-w>k
+    map <c-l> <c-w>l
+    map <c-h> <c-w>h
+
+	" 键盘映射
+	nnoremap <leader>gst :SignifyToggle<CR>
+	nnoremap <leader>gsh :SignifyToggleHighlight<CR>
+	nnoremap <leader>gsr :SignifyRefresh<CR>
+	nnoremap <leader>gsd :SignifyDebug<CR>
+
+    map <leader>, <esc>:tabprevious<CR>
+    map <leader>. <esc>:tabnext<CR>
+    " 打开 tag bar
+"}
+
+" AireLine {
+	let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+	let g:airline#extensions#tabline#show_tab_nr = 1
+	let g:airline#extensions#tabline#formatter = 'default'
+	let g:airline#extensions#tabline#buffer_nr_show = 0
+	let g:airline#extensions#tabline#fnametruncate = 16
+	let g:airline#extensions#tabline#fnamecollapse = 2
+	let g:airline#extensions#tabline#buffer_idx_mode = 1
+	nnoremap <C-tab> :bn<CR>
+	nnoremap <C-s-tab> :bp<CR>
+
+    " 显示光标所在的关键字所出现的所有位置
+    nmap <Leader>kk [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>"]"]
+"}
+
+
+" Ag {
+    "ag 的时候不搜索文件名字中的关键字
+    command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+" }
+
+" Tags {
+    set tags=./.tags;,.tags
+
+    " gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
+    let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+
+    " 所生成的数据文件的名称
+    let g:gutentags_ctags_tagfile = '.tags'
+
+    " 同时开启 ctags 和 gtags 支持：
+    let g:gutentags_modules = ['ctags', 'gtags_cscope']
+
+    " 将自动生成的 ctags/gtags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+    let g:gutentags_cache_dir = expand('~/.cache/tags')
+    let s:vim_tags = expand('~/.cache/tags')
+    " 检测 ~/.cache/tags 不存在就新建 "
+    if !isdirectory(s:vim_tags)
+        silent! call mkdir(s:vim_tags, 'p')
+    endif
+
+    " 配置 ctags 的参数
+    let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+    let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+    let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
+    " Get ctags version
+    let g:ctags_version = system('ctags --version')[0:8]
+
+    " 如果使用 universal ctags 需要增加下面一行
+    if g:ctags_version == "Universal"
+        let g:gutentags_ctags_extra_args += ['--extras=+q','--output-format=e-ctags']
+    endif
+ 
+    " 禁用 gutentags 自动加载 gtags 数据库的行为
+    " 避免多个项目数据库相互干扰
+    " 使用plus插件解决问题
+    let g:gutentags_auto_add_gtags_cscope = 0
+    let g:gutentags_plus_nomap = 1
+    let g:gutentags_plus_switch = 1
+    let g:airline#extensions#gutentags#enabled = 1
+    let g:gutentags_define_advanced_commands = 1
+    let g:gutentags_trace = 0
+
+    " 设置gutentags_plus
+    noremap <silent> <leader>ga :GscopeFind a <C-R><C-W><cr>                    " Find places where this symbol is assigned a value
+    noremap <silent> <leader>gc :GscopeFind c <C-R><C-W><cr>                    " Find functions calling this function
+    noremap <silent> <leader>gd :GscopeFind d <C-R><C-W><cr>                    " Find functions called by this function
+    noremap <silent> <leader>ge :GscopeFind e <C-R><C-W><cr>                    " Find this egrep pattern
+    noremap <silent> <leader>gf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>   " Find this file
+    noremap <silent> <leader>gg :GscopeFind g <C-R><C-W><cr>                    " Find thish definition
+    noremap <silent> <leader>gi :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>   " Find files #including this file
+    noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>                    " Find this symbol
+    noremap <silent> <leader>gt :GscopeFind t <C-R><C-W><cr>                    " Find this text string
+
+    let g:tagbar_type_go = {
+        \ 'ctagstype' : 'go',
+        \ 'kinds'     : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions'
+        \ ],
+        \ 'sro' : '.',
+        \ 'kind2scope' : {
+            \ 't' : 'ctype',
+            \ 'n' : 'ntype'
+        \ },
+        \ 'scope2kind' : {
+            \ 'ctype' : 't',
+            \ 'ntype' : 'n'
+        \ },
+        \ 'ctagsbin'  : 'gotags',
+        \ 'ctagsargs' : '-sort -silent'
+    \ }
+
+" }
+
+" NerdTree {
+    let NERDTreeQuitOnOpen=0
+" }
+" VIM-Go {
+set autowrite
+	"let g:AutoClosePreserveDotReg = 0
+	let g:go_fmt_command = "goimports"
+	let g:go_autodetect_gopath = 1
+	let g:go_list_type = "quickfix"
+	"let g:go_fillstruct_mode = "fillstruct" 
+	let g:go_fillstruct_mode = "gopls" 
+	let g:go_version_warning = 1
+	let g:go_highlight_function_parameters = 1
+	let g:go_highlight_extra_types = 1
+	let g:go_highlight_build_constraints = 1
+	let g:go_highlight_types = 1
+	let g:go_highlight_variable_declarations =0
+	let g:go_highlight_variable_assignments = 0
+	let g:go_highlight_fields = 1
+	let g:go_highlight_functions = 1
+	let g:go_highlight_function_calls = 1
+	let g:go_highlight_operators = 1
+	let g:go_highlight_methods = 1
+	let g:go_highlight_generate_tags = 1
+	let g:godef_split=2
+	let g:go_fmt_autosave = 1
+	let g:go_textobj_include_function_doc = 1 
+	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+	let g:go_metalinter_autosave = 1
+	let g:go_code_completion_icase = 0
+	let g:go_auto_type_info = 0
+	let g:go_auto_sameids = 0
+	"let g:go_doc_popup_window = 1
+" }
+
+augroup go
+    autocmd!
+    " 不在设置全局绑定
+    nnoremap <leader>ff :GoFillStruct<CR>
+
+    autocmd FileType go nmap <C-g> :GoDeclsDir<cr>
+    autocmd FileType go imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
+
+    " Show by default 4 spaces for a tab
+    autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
+    " :GoBuild and :GoTestCompile
+    autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+    " :GoTest
+    autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+    " :GoRun
+    autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+    " :GoImplements
+    autocmd FileType go nmap <leader>i  <Plug>(go-implements)
+
+    " :GoCaller
+    autocmd FileType go nmap <leader>cr  <Plug>(go-callers)
+
+    " :GoCallees
+    autocmd FileType go nmap <leader>ce  <Plug>(go-calleres)
+
+    " :GoCoverageToggle
+    autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+
+    " :GoMetaLinter
+    autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
+
+    " :GoDef but opens in a vertical split
+    autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
+    " :GoDef but opens in a horizontal split
+    autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
+
+    " :GoAlternate  commands :A, :AV, :AS and :AT
+    autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+    autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+    autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+    autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+augroup END
+
+" File Type mapping{
+    " Go 语言配置：执行`:GoBuild`时先在Buf内检查代码错误
+    autocmd BufRead,BufNewFile *.go set autowrite
+    " 识别markdown文件
+    autocmd BufRead,BufNewFile *.mkd,*.markdown,*.mdwn,*.md set filetype=markdown
+    " 将xtpl,vue识别为html
+    autocmd BufRead,BufNewFile *.xtpl,*.we,*.vue set filetype=html
+    " 将less,scss识别为css autocmd BufRead,BufNewFile *.less,*.scss set filetype=css
+    autocmd BufRead,BufNewFile *.nim,*.nimble set filetype=nim
+" }
+
+" Overide {
+    unmap <C-e>
+    unmap <leader>e
+    unmap <leader>nt
+"}
+"
+" 其它说明
+" gc: 选中并注释
+" gcc: 无需先中并注释
+" ngcc: 注释 n 行
+" buffers 切换相关
+" :bn 下一个
+" :bp 前一个
+" :bx 第 x 个

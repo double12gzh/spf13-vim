@@ -1,0 +1,10 @@
+" Color schemes
+
+" Programming
+    Bundle 'ludovicchabant/vim-gutentags'
+    Bundle 'skywind3000/gutentags_plus'
+    Bundle 'skywind3000/vim-preview'
+    Bundle 'dracula/vim'
+    Bundle 'w0rp/ale'
+    Bundle 'junegunn/fzf'
+    Bundle 'junegunn/fzf.vim'

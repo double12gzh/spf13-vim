@@ -1,0 +1,5 @@
+" new line added new to run :BundleClean!
+"
+" remove this plugin
+UnBundle 'spf13/vim-preview'
+"UnBundle 'scrooloose/syntastic'
