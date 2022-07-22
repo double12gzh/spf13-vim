@@ -62,6 +62,11 @@
 	set iskeyword-=.
 " }
 
+" VIM-Preview {
+    autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+    autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" }
+
 " ALE {
 	let g:ale_linters_explicit = 1 " 除g:ale_linters指定，其他不可用
 	let g:ale_linters = {
@@ -294,8 +299,14 @@ augroup go
     " :GoTest
     autocmd FileType go nmap <leader>t  <Plug>(go-test)
 
+    " :GoTest for func
+    autocmd FileType go nmap <leader>tf  <Plug>(go-test-func)
+
     " :GoRun
     autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+    " :GoReferrers
+    autocmd FileType go nmap <leader>rf <Plug>(go-referrers)
 
     " :GoImplements
     autocmd FileType go nmap <leader>i  <Plug>(go-implements)

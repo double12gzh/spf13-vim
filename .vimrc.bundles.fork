@@ -4,6 +4,10 @@
 " Color schemes
 
 " Programming
+    " remove
+    UnBundle 'spf13/vim-preview'
+
+    " add
     Bundle 'ludovicchabant/vim-gutentags'
     Bundle 'skywind3000/gutentags_plus'
     Bundle 'skywind3000/vim-preview'
@@ -11,3 +15,4 @@
     Bundle 'w0rp/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
+
