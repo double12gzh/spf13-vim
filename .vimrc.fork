@@ -245,10 +245,6 @@
     let NERDTreeQuitOnOpen=0
 " }
 
-" SnipMate {
-    let g:snipMate = { 'snippet_version' : 1 }
-" }
-
 " VIM-Go {
 	"let g:AutoClosePreserveDotReg = 0
 	let g:go_fmt_command = "goimports"
