@@ -151,7 +151,7 @@
 " }
 
 " Tags {
-    set tags=./.tags;,.tags
+    "set tags=./.tags;,.tags
 
     " gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
     let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
@@ -203,7 +203,9 @@
     noremap <silent> <leader>gi :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>   " Find files #including this file
     noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>                    " Find this symbol
     noremap <silent> <leader>gt :GscopeFind t <C-R><C-W><cr>                    " Find this text string
+"}
 
+" Tagbar {
     let g:tagbar_type_go = {
         \ 'ctagstype' : 'go',
         \ 'kinds'     : [
@@ -237,8 +239,8 @@
 " NerdTree {
     let NERDTreeQuitOnOpen=0
 " }
+
 " VIM-Go {
-set autowrite
 	"let g:AutoClosePreserveDotReg = 0
 	let g:go_fmt_command = "goimports"
 	let g:go_autodetect_gopath = 1
@@ -271,8 +273,11 @@ set autowrite
 
 augroup go
     autocmd!
+
+    autocmd BufRead,BufNewFile *.go set autowrite
+
     " 不在设置全局绑定
-    nnoremap <leader>ff :GoFillStruct<CR>
+    autocmd FileType go nnoremap <leader>ff :GoFillStruct<CR>
 
     autocmd FileType go nmap <C-g> :GoDeclsDir<cr>
     autocmd FileType go imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
@@ -316,9 +321,7 @@ augroup go
     autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 augroup END
 
-" File Type mapping{
-    " Go 语言配置：执行`:GoBuild`时先在Buf内检查代码错误
-    autocmd BufRead,BufNewFile *.go set autowrite
+" Misc {
     " 识别markdown文件
     autocmd BufRead,BufNewFile *.mkd,*.markdown,*.mdwn,*.md set filetype=markdown
     " 将xtpl,vue识别为html

@@ -1,3 +1,6 @@
+" Global 
+    let g:spf13_use_powerline = 1
+
 " Color schemes
 
 " Programming
