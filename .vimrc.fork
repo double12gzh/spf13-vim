@@ -2,7 +2,7 @@
     syntax enable
     "colorscheme dracula
     "colorscheme neodark
-    colorscheme Atelier_EstuaryLight
+    colorscheme gruvbox
 
     let mapleader = ","
     let &t_TI = ""
