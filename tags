@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+APP_PATH	spf13-vim-windows-install.cmd	/^@set APP_PATH=%HOME%\\.spf13-vim-3$/;"	v
+APP_PATH	spf13-vim-windows-xp-install.cmd	/^@set APP_PATH=%HOME%\\.spf13-vim-3$/;"	v
+HOME	spf13-vim-windows-install.cmd	/^@if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%$/;"	v
+HOME	spf13-vim-windows-install.cmd	/^@if not exist "%HOME%" @set HOME=%USERPROFILE%$/;"	v
+HOME	spf13-vim-windows-xp-install.cmd	/^@if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%$/;"	v
+HOME	spf13-vim-windows-xp-install.cmd	/^@if not exist "%HOME%" @set HOME=%USERPROFILE%$/;"	v
+ORIGINAL_DIR	spf13-vim-windows-install.cmd	/^    @set ORIGINAL_DIR=%CD%$/;"	v
+ORIGINAL_DIR	spf13-vim-windows-xp-install.cmd	/^    @set ORIGINAL_DIR=%CD%$/;"	v
+create_symlinks	bootstrap.sh	/^create_symlinks() {$/;"	f
+debug	bootstrap.sh	/^debug() {$/;"	f
+die	uninstall.sh	/^die() {$/;"	f
+do_backup	bootstrap.sh	/^do_backup() {$/;"	f
+error	bootstrap.sh	/^error() {$/;"	f
+lnif	bootstrap.sh	/^lnif() {$/;"	f
+msg	bootstrap.sh	/^msg() {$/;"	f
+program_exists	bootstrap.sh	/^program_exists() {$/;"	f
+program_must_exist	bootstrap.sh	/^program_must_exist() {$/;"	f
+setup_fork_mode	bootstrap.sh	/^setup_fork_mode() {$/;"	f
+setup_vundle	bootstrap.sh	/^setup_vundle() {$/;"	f
+success	bootstrap.sh	/^success() {$/;"	f
+sync_repo	bootstrap.sh	/^sync_repo() {$/;"	f
+today	spf13-vim-windows-xp-install.cmd	/^    @set today=%DATE%$/;"	v
+variable_set	bootstrap.sh	/^variable_set() {$/;"	f
+warn	uninstall.sh	/^warn() {$/;"	f

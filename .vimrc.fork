@@ -99,9 +99,6 @@
     "let g:ale_sign_warning = '⚡'
 " }
 
-" Sinify {
-    set signcolumn=yes
-" }
 
 " Key Map {
     map <F2> :NERDTreeToggle<CR>
@@ -129,6 +126,7 @@
 " Signify {
     map <F10> ::SignifyDiff<CR>
 
+    set signcolumn=yes
 	nnoremap <leader>gsr :SignifyRefresh<CR>
     nmap <leader>sn <plug>(signify-next-hunk)
     nmap <leader>sp <plug>(signify-prev-hunk)
