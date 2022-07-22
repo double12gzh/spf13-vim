@@ -174,6 +174,27 @@ setup_vundle() {
     debug
 }
 
+install_pkg() {
+    source /etc/os-release
+
+    case $ID in
+    ubuntu)
+        # ALE shell checker
+        sudo apt-get install -y shellcheck
+        ;;
+    centos)
+        yumdnf="yum"
+        if test "$(echo "$VERSION_ID >= 22" | bc)" -ne 0; then
+            yumdnf="dnf"
+        fi
+        sudo $yumdnf install -y shellcheck
+        ;;
+    *)
+        echo "skipped for unknown os"
+        ;;
+    esac
+}
+
 ############################ MAIN()
 variable_set "$HOME"
 program_must_exist "vim"
@@ -201,6 +222,8 @@ sync_repo       "$HOME/.vim/bundle/vundle" \
                 "vundle"
 
 setup_vundle    "$APP_PATH/.vimrc.bundles.default"
+
+install_pkg
 
 msg             "\nThanks for installing $app_name."
 msg             "© `date +%Y` http://vim.spf13.com/"
