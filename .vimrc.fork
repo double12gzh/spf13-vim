@@ -148,7 +148,6 @@
     nmap <Leader>kk [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 "}
 
-
 " FZF {
     set rtp+=/usr/local/bin/fzf
 
@@ -245,6 +244,10 @@
     let NERDTreeQuitOnOpen=0
 " }
 
+" {
+    let g:pymode_python = 'python3'
+" }
+
 " VIM-Go {
 	"let g:AutoClosePreserveDotReg = 0
 	let g:go_fmt_command = "goimports"
@@ -330,6 +333,12 @@ augroup go
     autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
     autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
     autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+augroup END
+
+augroup py
+	autocmd!
+	autocmd InsertEnter *.py setlocal foldmethod=marker
+	autocmd InsertLeave *.py setlocal foldmethod=expr
 augroup END
 
 " Misc {
