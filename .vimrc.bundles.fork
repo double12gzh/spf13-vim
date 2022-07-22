@@ -6,6 +6,7 @@
 " Programming
     " remove
     UnBundle 'spf13/vim-preview'
+    UnBundle 'spf13/PIV'
 
     " add
     Bundle 'ludovicchabant/vim-gutentags'
