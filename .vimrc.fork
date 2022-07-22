@@ -109,8 +109,7 @@
     map <F4> :CtrlPMixed<CR>
     map <F6> :Ag<CR>
     map <F7> :FZF<CR>
-    map <F9> ::ALEToggle<CR>
-    map <F10> ::SignifyDiff<CR>
+    map <F9> :ALEToggle<CR>
     map <F11> :UndotreeToggle<CR>
     map <F12> :Flake8<CR>
 
@@ -122,15 +121,17 @@
     map <c-l> <c-w>l
     map <c-h> <c-w>h
 
-	" 键盘映射
-	nnoremap <leader>gst :SignifyToggle<CR>
-	nnoremap <leader>gsh :SignifyToggleHighlight<CR>
-	nnoremap <leader>gsr :SignifyRefresh<CR>
-	nnoremap <leader>gsd :SignifyDebug<CR>
-
     map <leader>, <esc>:tabprevious<CR>
     map <leader>. <esc>:tabnext<CR>
     " 打开 tag bar
+"}
+
+" Signify {
+    map <F10> ::SignifyDiff<CR>
+
+	nnoremap <leader>gsr :SignifyRefresh<CR>
+    nmap <leader>sn <plug>(signify-next-hunk)
+    nmap <leader>sp <plug>(signify-prev-hunk)
 "}
 
 " AireLine {
@@ -146,14 +147,16 @@
 	nnoremap <C-s-tab> :bp<CR>
 
     " 显示光标所在的关键字所出现的所有位置
-    nmap <Leader>kk [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>"]"]
+    nmap <Leader>kk [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 "}
 
 
-" Ag {
+" FZF {
+    set rtp+=/usr/local/bin/fzf
+
     "ag 的时候不搜索文件名字中的关键字
     command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
-" }
+"}
 
 " Tags {
     " gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
