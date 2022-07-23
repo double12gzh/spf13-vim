@@ -180,7 +180,7 @@ install_pkg() {
     case $ID in
     ubuntu)
         # ALE shell checker
-        sudo apt-get install -y shellcheck highlight
+        sudo apt-get install -y shellcheck highlight global
         ;;
     centos)
         yumdnf="yum"
