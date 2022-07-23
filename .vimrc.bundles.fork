@@ -16,4 +16,3 @@
     Bundle 'w0rp/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
-    Bundle 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }

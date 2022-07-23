@@ -120,7 +120,10 @@
 
     map <leader>, <esc>:tabprevious<CR>
     map <leader>. <esc>:tabnext<CR>
-    " 打开 tag bar
+
+    " buffer 切换, :bd 关闭 buf
+	nnoremap <C-tab> :bn<CR>
+	nnoremap <C-s-tab> :bp<CR>
 "}
 
 " Signify {
@@ -141,8 +144,7 @@
 	let g:airline#extensions#tabline#fnametruncate = 16
 	let g:airline#extensions#tabline#fnamecollapse = 2
 	let g:airline#extensions#tabline#buffer_idx_mode = 1
-	nnoremap <C-tab> :bn<CR>
-	nnoremap <C-s-tab> :bp<CR>
+
 
     " 显示光标所在的关键字所出现的所有位置
     nmap <Leader>kk [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
@@ -278,23 +280,6 @@
 	let g:go_auto_sameids = 0
 	"let g:go_doc_popup_window = 1
 " }
-
-" LeaderF {
-    let g:Lf_HideHelp = 1
-    let g:Lf_UseCache = 0
-    let g:Lf_UseVersionControlTool = 0
-    let g:Lf_IgnoreCurrentBufferName = 1
-    let g:Lf_WindowPosition = 'popup'
-    let g:Lf_PreviewInPopup = 1
-    let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
-    let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
-
-    let g:Lf_ShortcutF = "<leader>fw"
-    noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-    noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-    noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
-    noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-"}
 
 augroup go
     autocmd!
