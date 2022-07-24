@@ -118,7 +118,7 @@
     map <c-l> <c-w>l
     map <c-h> <c-w>h
 
-    map <leader>, <esc>:tabprevious<CR>
+    map <leader>m <esc>:tabprevious<CR>
     map <leader>. <esc>:tabnext<CR>
 
     " buffer 切换, :bd 关闭 buf
