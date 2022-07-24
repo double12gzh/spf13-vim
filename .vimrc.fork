@@ -101,25 +101,25 @@
 
 
 " Key Map {
-    map <F2> :NERDTreeToggle<CR>
-    map <F3> :TagbarToggle<CR>
-    map <F4> :CtrlPMixed<CR>
-    map <F6> :Ag<CR>
-    map <F7> :FZF<CR>
-    map <F9> :ALEToggle<CR>
-    map <F11> :UndotreeToggle<CR>
-    map <F12> :Flake8<CR>
+    nnoremap <F2> :NERDTreeToggle<CR>
+    nnoremap <F3> :TagbarToggle<CR>
+    nnoremap <F4> :CtrlPMixed<CR>
+    nnoremap <F6> :Ag<CR>
+    nnoremap <F7> :FZF<CR>
+    nnoremap <F9> :ALEToggle<CR>
+    nnoremap <F11> :UndotreeToggle<CR>
+    nnoremap <F12> :Flake8<CR>
 
     " Movement
     " bind Ctrl + <movement> keys to move around the windows,
     " instead of using Ctrl + w + <movement>
-    map <c-j> <c-w>j
-    map <c-k> <c-w>k
-    map <c-l> <c-w>l
-    map <c-h> <c-w>h
+    nnoremap <c-j> <c-w>j
+    nnoremap <c-k> <c-w>k
+    nnoremap <c-l> <c-w>l
+    nnoremap <c-h> <c-w>h
 
-    map <leader>m <esc>:tabprevious<CR>
-    map <leader>. <esc>:tabnext<CR>
+    nnoremap <leader>m <esc>:tabprevious<CR>
+    nnoremap <leader>. <esc>:tabnext<CR>
 
     " buffer 切换, :bd 关闭 buf
 	nnoremap <C-tab> :bn<CR>
@@ -127,9 +127,14 @@
 "}
 
 " Signify {
-    map <F10> ::SignifyDiff<CR>
-
+    " for performance
+    set updatetime=100
     set signcolumn=yes
+    let g:signify_skip = { 'vcs': { 'allow': ['git'] } }
+
+    let g:signify_update_on_bufenter = 0
+
+    nmap <F10> ::SignifyDiff<CR>
 	nnoremap <leader>gsr :SignifyRefresh<CR>
     nmap <leader>sn <plug>(signify-next-hunk)
     nmap <leader>sp <plug>(signify-prev-hunk)
@@ -210,37 +215,6 @@
     noremap <silent> <leader>gs :GscopeFind s <C-R><C-W><cr>                    " Find this symbol
     noremap <silent> <leader>gt :GscopeFind t <C-R><C-W><cr>                    " Find this text string
 "}
-
-" Tagbar {
-    let g:tagbar_type_go = {
-        \ 'ctagstype' : 'go',
-        \ 'kinds'     : [
-            \ 'p:package',
-            \ 'i:imports:1',
-            \ 'c:constants',
-            \ 'v:variables',
-            \ 't:types',
-            \ 'n:interfaces',
-            \ 'w:fields',
-            \ 'e:embedded',
-            \ 'm:methods',
-            \ 'r:constructor',
-            \ 'f:functions'
-        \ ],
-        \ 'sro' : '.',
-        \ 'kind2scope' : {
-            \ 't' : 'ctype',
-            \ 'n' : 'ntype'
-        \ },
-        \ 'scope2kind' : {
-            \ 'ctype' : 't',
-            \ 'ntype' : 'n'
-        \ },
-        \ 'ctagsbin'  : 'gotags',
-        \ 'ctagsargs' : '-sort -silent'
-    \ }
-
-" }
 
 " NerdTree {
     let NERDTreeQuitOnOpen=0
