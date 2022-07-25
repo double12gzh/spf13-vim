@@ -12,7 +12,7 @@
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1
 
-    filetype off
+    filetype on
 
 	set encoding=utf-8
 	set nocompatible                                                    " explicitly get out of vi-compatible mode
