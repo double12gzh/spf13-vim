@@ -216,7 +216,7 @@
     let NERDTreeQuitOnOpen=0
 " }
 
-" {
+" PythonMode {
     let g:pymode_python = 'python3'
 " }
 
