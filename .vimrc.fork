@@ -134,7 +134,7 @@
 
     let g:signify_update_on_bufenter = 0
 
-    nmap <F10> ::SignifyDiff<CR>
+    nnoremap <F10> ::SignifyDiff<CR>
 	nnoremap <leader>gsr :SignifyRefresh<CR>
     nmap <leader>sn <plug>(signify-next-hunk)
     nmap <leader>sp <plug>(signify-prev-hunk)
