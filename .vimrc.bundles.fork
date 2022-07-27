@@ -16,3 +16,5 @@
     Bundle 'w0rp/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
+    " see github, make is needed
+    Bundle 'Shougo/vimproc.vim' 

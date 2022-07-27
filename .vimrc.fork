@@ -122,9 +122,22 @@
 	nnoremap <C-s-tab> :bp<CR>
 "}
 
+" CtrlP {
+    let g:ctrlp_clear_cache_on_exit = 0
+    let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+    if executable('ag')
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    endif
+    let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|direnv)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+" }
+
 " Signify {
     " for performance
-    set updatetime=100
+    set updatetime=50
     set signcolumn=yes
     let g:signify_skip = { 'vcs': { 'allow': ['git'] } }
 
@@ -241,7 +254,6 @@
 	let g:go_highlight_methods = 1
 	let g:go_highlight_generate_tags = 1
 	let g:godef_split=2
-	let g:go_fmt_autosave = 1
 	let g:go_textobj_include_function_doc = 1 
 	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 	let g:go_metalinter_autosave = 1
