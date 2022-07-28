@@ -9,6 +9,7 @@
     UnBundle 'spf13/PIV'
     UnBundle 'mattn/vim-gist'
     UnBundle 'mattn/webapi-vim'
+    UnBundle 'nathanaelkane/vim-indent-guides'
 
     " add
     Bundle 'ludovicchabant/vim-gutentags'
@@ -18,3 +19,4 @@
     Bundle 'w0rp/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
+    Bundle 'Yggdroot/indentLine'
