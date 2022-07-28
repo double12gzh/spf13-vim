@@ -10,34 +10,35 @@
 
     filetype on
 
-	set encoding=utf-8
-	set nocompatible                                                    " explicitly get out of vi-compatible mode
-	set termencoding=utf-8
-	set fileencodings=utf-8,gbk,latin1
+    set encoding=utf-8
+    set nocompatible                                                    " explicitly get out of vi-compatible mode
+    set termencoding=utf-8
+    set fileencodings=utf-8,gbk,latin1
     set cscopetag
-	set backspace=indent,eol,start                                      " Allow backspace in insert mode
-	set history=1000                                                    " Store lots of :cmdline history
-	set showcmd                                                         " Show incomplete cmds down the bottom
-	set showmode                                                        " Show current mode down the bottom
-	set gcr=a:blinkon0                                                  " Disable cursor blink
-	set novisualbell                                                    " No sounds
-	set noerrorbells                                                    " No noise
-	set t_vb=
-	set tm=500
-	set autoread                                                        " Reload files changed outside vim
-	set showmatch                                                       " Show matching brackets
-	set laststatus=2                                                    " Always show status line
-	set t_Co=256                                                        " As I use dark background in mac, I also can use this colorscheme on mac
-	set nowb
-	set list listchars=tab:\ \ ,trail:·                                 " Display tabs and trailing spaces visually
-	set wrap
-	set mouse=v
-	set ts=4
-	set ignorecase
-	set nobackup
-	set nowb
-	set noswapfile
-	set belloff=all
+    set backspace=indent,eol,start                                      " Allow backspace in insert mode
+    set history=1000                                                    " Store lots of :cmdline history
+    set showcmd                                                         " Show incomplete cmds down the bottom
+    set showmode                                                        " Show current mode down the bottom
+    set gcr=a:blinkon0                                                  " Disable cursor blink
+    set novisualbell                                                    " No sounds
+    set noerrorbells                                                    " No noise
+    set t_vb=
+    set tm=500
+    set autoread                                                        " Reload files changed outside vim
+    set showmatch                                                       " Show matching brackets
+    set laststatus=2                                                    " Always show status line
+    set t_Co=256                                                        " As I use dark background in mac, I also can use this colorscheme on mac
+    set nowb
+    set list listchars=tab:\ \ ,trail:·                                 " Display tabs and trailing spaces visually
+    set list lcs=tab:\|.
+    set wrap
+    set mouse=v
+    set ts=4
+    set ignorecase
+    set nobackup
+    set nowb
+    set noswapfile
+    set belloff=all
     set incsearch                                                       " Find the next match as we type the search
     set hlsearch                                                        " Hilight searches by default
     set viminfo='100,f1                                                 " Save up to 100 marks, enable capital marks
@@ -51,7 +52,7 @@
     set foldmethod=indent                                               " fold based on indent
     set foldnestmax=3                                                   " deepest fold is 3 levels
     set nofoldenable                                                    " dont fold by default
-	set iskeyword-=.
+    set iskeyword-=.
 " }
 
 " VIM-Preview {
@@ -60,8 +61,8 @@
 " }
 
 " ALE {
-	let g:ale_linters_explicit = 1 " 除g:ale_linters指定，其他不可用
-	let g:ale_linters = {
+    let g:ale_linters_explicit = 1 " 除g:ale_linters指定，其他不可用
+    let g:ale_linters = {
         \   'cpp': ['cppcheck','clang','gcc'],
         \   'c': ['cppcheck','clang', 'gcc'],
         \   'python': ['pylint'],
@@ -114,8 +115,8 @@
     nnoremap <leader>. <esc>:tabnext<CR>
 
     " buffer 切换, :bd 关闭 buf
-	nnoremap <C-tab> :bn<CR>
-	nnoremap <C-s-tab> :bp<CR>
+    nnoremap <C-tab> :bn<CR>
+    nnoremap <C-s-tab> :bp<CR>
 "}
 
 " CtrlP {
@@ -140,20 +141,20 @@
     let g:signify_update_on_bufenter = 0
 
     nnoremap <F10> ::SignifyDiff<CR>
-	nnoremap <leader>gsr :SignifyRefresh<CR>
+    nnoremap <leader>gsr :SignifyRefresh<CR>
     nmap <leader>sn <plug>(signify-next-hunk)
     nmap <leader>sp <plug>(signify-prev-hunk)
 "}
 
 " AireLine {
-	let g:airline#extensions#tabline#enabled = 1
-	let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-	let g:airline#extensions#tabline#show_tab_nr = 1
-	let g:airline#extensions#tabline#formatter = 'default'
-	let g:airline#extensions#tabline#buffer_nr_show = 0
-	let g:airline#extensions#tabline#fnametruncate = 16
-	let g:airline#extensions#tabline#fnamecollapse = 2
-	let g:airline#extensions#tabline#buffer_idx_mode = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+    let g:airline#extensions#tabline#show_tab_nr = 1
+    let g:airline#extensions#tabline#formatter = 'default'
+    let g:airline#extensions#tabline#buffer_nr_show = 0
+    let g:airline#extensions#tabline#fnametruncate = 16
+    let g:airline#extensions#tabline#fnamecollapse = 2
+    let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 
     " 显示光标所在的关键字所出现的所有位置
@@ -230,33 +231,33 @@
 " }
 
 " VIM-Go {
-	"let g:AutoClosePreserveDotReg = 0
-	let g:go_fmt_command = "goimports"
-	let g:go_autodetect_gopath = 1
-	let g:go_list_type = "quickfix"
-	"let g:go_fillstruct_mode = "fillstruct" 
-	let g:go_fillstruct_mode = "gopls" 
-	let g:go_version_warning = 1
-	let g:go_highlight_function_parameters = 0
-	let g:go_highlight_extra_types = 0
-	let g:go_highlight_build_constraints = 1
-	let g:go_highlight_types = 1
-	let g:go_highlight_variable_declarations =0
-	let g:go_highlight_variable_assignments = 0
-	let g:go_highlight_fields = 1
-	let g:go_highlight_functions = 1
-	let g:go_highlight_function_calls = 1
-	let g:go_highlight_operators = 1
-	let g:go_highlight_methods = 1
-	let g:go_highlight_generate_tags = 1
-	let g:godef_split=2
-	let g:go_textobj_include_function_doc = 1 
-	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-	let g:go_metalinter_autosave = 1
-	let g:go_code_completion_icase = 0
-	let g:go_auto_type_info = 0
-	let g:go_auto_sameids = 0
-	"let g:go_doc_popup_window = 1
+    "let g:AutoClosePreserveDotReg = 0
+    let g:go_fmt_command = "goimports"
+    let g:go_autodetect_gopath = 1
+    let g:go_list_type = "quickfix"
+    "let g:go_fillstruct_mode = "fillstruct" 
+    let g:go_fillstruct_mode = "gopls" 
+    let g:go_version_warning = 1
+    let g:go_highlight_function_parameters = 0
+    let g:go_highlight_extra_types = 0
+    let g:go_highlight_build_constraints = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_variable_declarations =0
+    let g:go_highlight_variable_assignments = 0
+    let g:go_highlight_fields = 1
+    let g:go_highlight_functions = 1
+    let g:go_highlight_function_calls = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_generate_tags = 1
+    let g:godef_split=2
+    let g:go_textobj_include_function_doc = 1 
+    let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+    let g:go_metalinter_autosave = 1
+    let g:go_code_completion_icase = 0
+    let g:go_auto_type_info = 0
+    let g:go_auto_sameids = 0
+    "let g:go_doc_popup_window = 1
 " }
 
 augroup go
@@ -316,9 +317,9 @@ augroup go
 augroup END
 
 augroup py
-	autocmd!
-	autocmd InsertEnter *.py setlocal foldmethod=marker
-	autocmd InsertLeave *.py setlocal foldmethod=expr
+    autocmd!
+    autocmd InsertEnter *.py setlocal foldmethod=marker
+    autocmd InsertLeave *.py setlocal foldmethod=expr
 augroup END
 
 " Misc {
