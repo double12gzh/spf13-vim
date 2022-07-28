@@ -7,6 +7,8 @@
     " remove
     UnBundle 'spf13/vim-preview'
     UnBundle 'spf13/PIV'
+    UnBundle 'mattn/vim-gist'
+    UnBundle 'mattn/webapi-vim'
 
     " add
     Bundle 'ludovicchabant/vim-gutentags'
@@ -16,5 +18,3 @@
     Bundle 'w0rp/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
-    " see github, make is needed
-    Bundle 'Shougo/vimproc.vim' 
