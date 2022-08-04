@@ -133,6 +133,9 @@ create_symlinks() {
 
     touch  "$target_path/.vimrc.local"
 
+    mkdir -p /usr/local/share/gtags
+    lnif "$source_path/gtags.conf"     "/usr/local/share/gtags/gtags.conf"
+
     ret="$?"
     success "Setting up vim symlinks."
     debug
