@@ -169,6 +169,9 @@
 "}
 
 " Tags {
+    " 安装 Pygments
+    " pip install Pygments
+    
     " 安装  gtags：
     " 下载最新包： https://ftp.gnu.org/pub/gnu/global/
     " ./configure && make && make install
