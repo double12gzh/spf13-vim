@@ -343,6 +343,7 @@ augroup END
     autocmd BufRead,BufNewFile *.xtpl,*.we,*.vue set filetype=html
     " 将less,scss识别为css autocmd BufRead,BufNewFile *.less,*.scss set filetype=css
     autocmd BufRead,BufNewFile *.nim,*.nimble set filetype=nim
+    "autocmd FileType c,cpp,go let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &syntax }
 " }
 
 " Overide {
