@@ -203,12 +203,14 @@
     " 禁用 gutentags 自动加载 gtags 数据库的行为
     " 避免多个项目数据库相互干扰
     " 使用plus插件解决问题
-    let g:gutentags_auto_add_gtags_cscope = 0
-    let g:gutentags_plus_nomap = 1
-    let g:gutentags_plus_switch = 1
-    let g:airline#extensions#gutentags#enabled = 1
-    let g:gutentags_define_advanced_commands = 1
-    let g:gutentags_trace = 0
+    "let g:gutentags_auto_add_gtags_cscope = 0
+    "let g:gutentags_plus_nomap = 1
+    "let g:gutentags_plus_switch = 1
+    "let g:airline#extensions#gutentags#enabled = 1
+    "let g:gutentags_define_advanced_commands = 1
+    " 
+    " bugfix: chmod a+x .vim/bundle/vim-gutentags/plat/unix/*.sh
+    "let g:gutentags_trace = 0
 
     " 设置gutentags_plus
     noremap <silent> <leader>ga :GscopeFind a <C-R><C-W><cr>                    " Find places where this symbol is assigned a value
@@ -268,8 +270,8 @@ augroup go
     " 不在设置全局绑定
     autocmd FileType go nnoremap <leader>ff :GoFillStruct<CR>
 
-    autocmd FileType go nmap <C-g> :GoDeclsDir<cr>
-    autocmd FileType go imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
+    "autocmd FileType go nmap <C-g> :GoDeclsDir<cr>
+    "autocmd FileType go imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
 
     " Show by default 4 spaces for a tab
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4

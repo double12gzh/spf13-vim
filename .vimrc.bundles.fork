@@ -16,7 +16,7 @@
     Bundle 'skywind3000/gutentags_plus'
     Bundle 'skywind3000/vim-preview'
     Bundle 'dracula/vim'
-    Bundle 'w0rp/ale'
+    Bundle 'dense-analysis/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
     Bundle 'Yggdroot/indentLine'
