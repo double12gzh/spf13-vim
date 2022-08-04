@@ -565,3 +565,4 @@ Here's some tips if you've never used VIM before:
 [phpmanual-img]:https://i.imgur.com/c0GGP.png
 [easymotion-img]:https://i.imgur.com/ZsrVL.png
 [airline-img]:https://i.imgur.com/D4ZYADr.png
+[配置]:http://www.wilson-blog.cn/post/2020/05/15/nvim.tmux.html
