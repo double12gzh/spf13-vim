@@ -67,7 +67,7 @@
         \   'c': ['cppcheck','clang', 'gcc'],
         \   'python': ['pylint'],
         \   'bash': ['shellcheck'],
-        \   'go': ['golint'],
+        \   'go': ['golint', 'gofmt', 'goimports'],
     \}
     let g:ale_sign_column_always = 1
     let g:ale_completion_delay = 500
@@ -246,7 +246,8 @@
 
 " VIM-Go {
     "let g:AutoClosePreserveDotReg = 0
-    let g:go_fmt_command = "goimports"
+    let g:go_fmt_command = "gopls"
+    let g:go_gopls_gofumpt=1
     let g:go_autodetect_gopath = 1
     let g:go_list_type = "quickfix"
     "let g:go_fillstruct_mode = "fillstruct" 
@@ -343,7 +344,7 @@ augroup END
     autocmd BufRead,BufNewFile *.xtpl,*.we,*.vue set filetype=html
     " 将less,scss识别为css autocmd BufRead,BufNewFile *.less,*.scss set filetype=css
     autocmd BufRead,BufNewFile *.nim,*.nimble set filetype=nim
-    "autocmd FileType c,cpp,go let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &syntax }
+    autocmd FileType c,cpp,go let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &syntax }
 " }
 
 " Overide {
@@ -360,3 +361,5 @@ augroup END
 " :bn 下一个
 " :bp 前一个
 " :bx 第 x 个
+" <leader>v 垂直 preview tag
+" ctrl+w+] 水平 preview tag
