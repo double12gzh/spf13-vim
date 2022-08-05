@@ -67,7 +67,7 @@
         \   'c': ['cppcheck','clang', 'gcc'],
         \   'python': ['pylint'],
         \   'bash': ['shellcheck'],
-        \   'go': ['golint', 'gofmt', 'goimports'],
+        \   'go': ['golint', 'gofmt', 'goimports', 'gofumpt', 'gometalinter'],
     \}
     let g:ale_sign_column_always = 1
     let g:ale_completion_delay = 500
