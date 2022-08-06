@@ -163,6 +163,7 @@
 
 " FZF {
     set rtp+=/usr/local/bin/fzf
+    nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 
     "ag 的时候不搜索文件名字中的关键字
     command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
