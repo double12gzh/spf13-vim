@@ -19,4 +19,4 @@
     Bundle 'dense-analysis/ale'
     Bundle 'junegunn/fzf'
     Bundle 'junegunn/fzf.vim'
-    Bundle 'Yggdroot/indentLine'
+    "Bundle 'Yggdroot/indentLine'
