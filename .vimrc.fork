@@ -30,7 +30,7 @@
     set t_Co=256                                                        " As I use dark background in mac, I also can use this colorscheme on mac
     set nowb
     set list listchars=tab:\ \ ,trail:·                                 " Display tabs and trailing spaces visually
-   " set list lcs=tab:\|.                                               " don't display tab indencation
+    set list lcs=tab:\|.                                                " don't display tab indencation. toggle: set list; cancel: set unlist
     set wrap
     set mouse=v
     set ts=4
