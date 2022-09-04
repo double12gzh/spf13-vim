@@ -155,6 +155,7 @@
     let g:airline#extensions#tabline#fnametruncate = 16
     let g:airline#extensions#tabline#fnamecollapse = 2
     let g:airline#extensions#tabline#buffer_idx_mode = 1
+    let g:airline#extensions#whitespace#enabled = 0 " 不检查是否有 tab/空格混合缩进
 
 
     " 显示光标所在的关键字所出现的所有位置
