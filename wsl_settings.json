@@ -1,6 +1,6 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "$schema": "https://raw.githubusercontent.com/double12gzh/spf13-vim/3.0/wsl_settings.json",
     "actions":
     [
         {
