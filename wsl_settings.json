@@ -1,0 +1,496 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 2
+            }
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+comma"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+n"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+w"
+        },
+        {
+            "command": "unbound",
+            "keys": "f11"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+insert"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+n"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+2"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+3"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+plus"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+comma"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+tab"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+6"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+n"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+7"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+8"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+comma"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+9"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+8"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+9"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+2"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+3"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+3"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+up"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+p"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+9"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+8"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+pgup"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+pgdn"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+numpad_plus"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+space"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+space"
+        },
+        {
+            "command": "unbound",
+            "keys": "win+sc(41)"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+end"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+home"
+        },
+        {
+            "command": "unbound",
+            "keys": "shift+insert"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+up"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+a"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+numpad0"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+7"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+6"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+5"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+4"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+1"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+2"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+alt+6"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+numpad_minus"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+7"
+        },
+        {
+            "command": "unbound",
+            "keys": ""
+        },
+        {
+            "command": "find"
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 7
+            }
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 0
+            }
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 3
+            }
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
+        },
+        {
+            "command":
+            {
+                "action": "newTab"
+            }
+        },
+        {
+            "command":
+            {
+                "action": "resizePane",
+                "direction": "up"
+            }
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 4
+            }
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 1
+            }
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 8
+            }
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 5
+            }
+        },
+        {
+            "command": "closePane"
+        },
+        {
+            "command":
+            {
+                "action": "switchToTab",
+                "index": 6
+            }
+        },
+        {
+            "command":
+            {
+                "action": "resizePane",
+                "direction": "down"
+            }
+        },
+        {
+            "command": "togglePaneZoom"
+        },
+        {
+            "command":
+            {
+                "action": "copy",
+                "singleLine": false
+            }
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "right"
+            }
+        },
+        {
+            "command":
+            {
+                "action": "resizePane",
+                "direction": "left"
+            }
+        },
+        {
+            "command":
+            {
+                "action": "resizePane",
+                "direction": "right"
+            }
+        },
+        {
+            "command": "selectAll"
+        }
+    ],
+    "alwaysShowTabs": false,
+    "copyFormatting": "all",
+    "copyOnSelect": true,
+    "defaultProfile": "{f9ceaf27-504c-58d7-927c-d1d6a7ac7d3c}",
+    "experimental.rendering.forceFullRepaint": true,
+    "experimental.rendering.software": true,
+    "largePasteWarning": false,
+    "multiLinePasteWarning": false,
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "Jeffrey",
+            "cursorShape": "vintage",
+            "scrollbarState": "hidden"
+        },
+        "list":
+        [
+            {
+                "font":
+                {
+                    "face": "Consolas"
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "opacity": 100,
+                "useAcrylic": true
+            },
+            {
+                "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+                "hidden": true,
+                "name": "Ubuntu-22.04",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "backgroundImage": null,
+                "colorScheme": "Jeffrey",
+                "font":
+                {
+                    "face": "Consolas"
+                },
+                "guid": "{f9ceaf27-504c-58d7-927c-d1d6a7ac7d3c}",
+                "hidden": false,
+                "name": "Ubuntu 22.04.1 LTS",
+                "scrollbarState": "hidden",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
+            }
+        ]
+    },
+    "schemes":
+    [
+        {
+            "background": "#282A36",
+            "black": "#282A36",
+            "blue": "#57C7FF",
+            "brightBlack": "#686868",
+            "brightBlue": "#57C7FF",
+            "brightCyan": "#9AEDFE",
+            "brightGreen": "#5AF78E",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF5C57",
+            "brightWhite": "#EFF0EB",
+            "brightYellow": "#F3F99D",
+            "cursorColor": "#97979B",
+            "cyan": "#F1F1F0",
+            "foreground": "#EFF0EB",
+            "green": "#5AF78E",
+            "name": "Jeffrey",
+            "purple": "#800080",
+            "red": "#FF5C57",
+            "selectionBackground": "#FEFFFF",
+            "white": "#F1F1F0",
+            "yellow": "#F3F99D"
+        }
+    ],
+    "showTabsInTitlebar": false,
+    "theme": "dark",
+    "useAcrylicInTabRow": true
+}
