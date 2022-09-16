@@ -169,6 +169,7 @@
 
     "ag 的时候不搜索文件名字中的关键字
     command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+    let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.9 } }
 "}
 
 " Tags {
