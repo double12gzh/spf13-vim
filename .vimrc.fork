@@ -68,6 +68,7 @@
         \   'python': ['pylint'],
         \   'bash': ['shellcheck'],
         \   'go': ['golint', 'gofmt', 'goimports', 'gofumpt', 'gometalinter'],
+        \   'rust': ['analyzer'],
     \}
     let g:ale_sign_column_always = 1
     let g:ale_completion_delay = 500
@@ -350,6 +351,27 @@ augroup END
     autocmd BufRead,BufNewFile *.nim,*.nimble set filetype=nim
     autocmd FileType c,cpp,go let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &syntax }
 " }
+
+" Rust {
+    let g:rustfmt_autosave = 1
+        if executable('rust-analyzer')
+          au User lsp_setup call lsp#register_server({
+                \   'name': 'Rust Language Server',
+                \   'cmd': {server_info->['rust-analyzer']},
+                \   'whitelist': ['rust'],
+                \   'initialization_options': {
+                \     'cargo': {
+                \       'buildScripts': {
+                \         'enable': v:true,
+                \       },
+                \     },
+                \     'procMacro': {
+                \       'enable': v:true,
+                \     },
+                \   },
+                \ })
+        endif
+"}
 
 " Overide {
     unmap <C-e>
