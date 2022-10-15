@@ -354,23 +354,19 @@ augroup END
 
 " Rust {
     let g:rustfmt_autosave = 1
-    if executable('rust-analyzer')
-        au User lsp_setup call lsp#register_server({
-            \   'name': 'Rust Language Server',
-            \   'cmd': {server_info->['rust-analyzer']},
-            \   'whitelist': ['rust'],
-            \   'initialization_options': {
-            \     'cargo': {
-            \       'buildScripts': {
-            \         'enable': v:true,
-            \       },
-            \     },
-            \     'procMacro': {
-            \       'enable': v:true,
-            \     },
-            \   },
-            \ })
-    endif
+"}
+
+" YCM {
+    let g:ycm_rust_toolchain_root = "/root/.rustup/toolchains/stable-x86_64-unknown-linux-gnu"
+    let g:ycm_language_server =
+                \[
+                \   {
+                \       'name': 'rust',
+                \       'cmdline': ['rust-analyzer'],
+                \       'filetypes': ['rust'],
+                \       'project_root_files': ['Cargo.toml'],
+                \   },
+                \]
 "}
 
 " Overide {
