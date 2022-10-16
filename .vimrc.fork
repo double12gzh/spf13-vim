@@ -359,8 +359,6 @@ augroup END
 
 " Rust {
     let g:rustfmt_autosave = 1
-    
-    " use rust tags refer to https://github.com/dan-t/rusty-tags
 "}
 
 " YCM {
