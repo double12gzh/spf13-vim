@@ -394,6 +394,15 @@ if executable('rust-analyzer')
         \ })
 endif
 
+if executable('pyright')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyright',
+        \ 'cmd': {server_info->['pyright']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
