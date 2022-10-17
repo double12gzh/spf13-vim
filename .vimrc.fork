@@ -376,32 +376,37 @@ augroup END
 
 " LSP Servers {
 " https://github.com/mattn/vim-lsp-settings
-if executable('rust-analyzer')
-  au User lsp_setup call lsp#register_server({
-        \   'name': 'Rust Language Server',
-        \   'cmd': {server_info->['rust-analyzer']},
-        \   'whitelist': ['rust'],
-        \   'initialization_options': {
-        \     'cargo': {
-        \       'buildScripts': {
-        \         'enable': v:true,
-        \       },
-        \     },
-        \     'procMacro': {
-        \       'enable': v:true,
-        \     },
-        \   },
-        \ })
-endif
-
-if executable('pyright')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyright',
-        \ 'cmd': {server_info->['pyright']},
-        \ 'allowlist': ['python'],
-        \ })
-endif
+" to setup lsp servers, just run :LspInstallServer [server_name], e.g:
+" :LspInstallServer rust-analyzer
+" :LspInstallServer pyright-langserver
+" [deprecated:start]
+"if executable('rust-analyzer')
+"  au User lsp_setup call lsp#register_server({
+"        \   'name': 'Rust Language Server',
+"        \   'cmd': {server_info->['rust-analyzer']},
+"        \   'whitelist': ['rust'],
+"        \   'initialization_options': {
+"        \     'cargo': {
+"        \       'buildScripts': {
+"        \         'enable': v:true,
+"        \       },
+"        \     },
+"        \     'procMacro': {
+"        \       'enable': v:true,
+"        \     },
+"        \   },
+"        \ })
+"endif
+"
+"if executable('pyright')
+"    " pip install python-language-server
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'pyright',
+"        \ 'cmd': {server_info->['pyright']},
+"        \ 'allowlist': ['python'],
+"        \ })
+"endif
+" [deprecated:end]
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
