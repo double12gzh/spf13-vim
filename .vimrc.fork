@@ -10,6 +10,7 @@
 
     filetype on
 
+    set mmp=500000
     set encoding=utf-8
     set nocompatible                                                    " explicitly get out of vi-compatible mode
     set termencoding=utf-8
@@ -201,7 +202,8 @@
     "let g:gutentags_modules = ['ctags', 'gtags_cscope']
 
     " 将自动生成的 ctags/gtags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
-    let s:vim_tags = expand('~/.cache/tags')
+    "let s:vim_tags = expand('~/.cache/tags')
+    let s:vim_tags = expand('/home/AFiles/.cache/tags')
     let g:gutentags_cache_dir = s:vim_tags
 
     " 检测 ~/.cache/tags 不存在就新建 "
@@ -358,7 +360,7 @@ augroup END
     autocmd BufRead,BufNewFile *.xtpl,*.we,*.vue set filetype=html
     " 将less,scss识别为css autocmd BufRead,BufNewFile *.less,*.scss set filetype=css
     autocmd BufRead,BufNewFile *.nim,*.nimble set filetype=nim
-    autocmd FileType c,cpp,go,rust let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &syntax }
+"    autocmd FileType c,cpp,go,rust let b:ycm_hover = { 'command': 'GetDoc', 'syntax': &syntax }
 " }
 
 " Rust {
@@ -366,16 +368,16 @@ augroup END
 "}
 
 " YCM {
-    let g:ycm_rust_toolchain_root = "/root/.rustup/toolchains/stable-x86_64-unknown-linux-gnu"
-    let g:ycm_language_server =
-                \[
-                \   {
-                \       'name': 'rust',
-                \       'cmdline': ['rust-analyzer'],
-                \       'filetypes': ['rust'],
-                \       'project_root_files': ['Cargo.toml'],
-                \   },
-                \]
+"    let g:ycm_rust_toolchain_root = "/root/.rustup/toolchains/stable-x86_64-unknown-linux-gnu"
+"    let g:ycm_language_server =
+"                \[
+"                \   {
+"                \       'name': 'rust',
+"                \       'cmdline': ['rust-analyzer'],
+"                \       'filetypes': ['rust'],
+"                \       'project_root_files': ['Cargo.toml'],
+"                \   },
+"                \]
 "}
 
 " asyncomplete.vim {
