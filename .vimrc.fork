@@ -68,7 +68,7 @@
         \   'python': ['pylint'],
         \   'bash': ['shellcheck'],
         \   'go': ['golint', 'gofmt', 'goimports', 'gofumpt', 'gometalinter'],
-        \   'rust': ['analyzer'],
+        \   'rust': ['analyzer', 'cargo', 'rls', 'rustc'],
     \}
     let g:ale_rust_analyzer_config = {
         \ 'cargo': { 'loadOutDirsFromCheck': v:true },
