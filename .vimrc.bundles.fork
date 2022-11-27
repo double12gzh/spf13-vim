@@ -22,3 +22,18 @@
     Bundle 'rust-lang/rust.vim'
     Bundle 'prabirshrestha/vim-lsp'
     Bundle 'mattn/vim-lsp-settings'
+
+    " complelte  {{
+    Bundle 'prabirshrestha/asyncomplete.vim'
+    Bundle 'prabirshrestha/asyncomplete-lsp.vim'
+    "}}
+    
+    " Neosnippet {{
+    Bundle 'thomasfaingnaert/vim-lsp-snippets'
+    Bundle 'thomasfaingnaert/vim-lsp-neosnippet'
+    Bundle 'Shougo/neosnippet.vim'
+    Bundle 'Shougo/neosnippet-snippets'
+    Bundle 'Shougo/deoplete.nvim'
+    Bundle 'roxma/nvim-yarp'
+    Bundle 'roxma/vim-hug-neovim-rpc'
+    "}}

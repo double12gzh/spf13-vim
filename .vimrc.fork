@@ -292,6 +292,10 @@ augroup go
 
     " 不在设置全局绑定
     autocmd FileType go nnoremap <leader>ff :GoFillStruct<CR>
+    autocmd FileType go nnoremap <leader>taj :GoAddTags json,omitempty<CR>
+    autocmd FileType go nnoremap <leader>tay :GoAddTags yaml<CR>
+    autocmd FileType go nnoremap <leader>tas :GoAddTags sql<CR>
+    autocmd FileType go nnoremap <leader>err :GoIfErr<CR>
 
     "autocmd FileType go nmap <C-g> :GoDeclsDir<cr>
     "autocmd FileType go imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
@@ -374,9 +378,62 @@ augroup END
                 \]
 "}
 
+" asyncomplete.vim {
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+" Force refresh completion
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+
+" To enable preview window
+" allow modifying the completeopt variable, or it will
+" be overridden all the time
+let g:asyncomplete_auto_completeopt = 0
+set completeopt=menuone,noinsert,noselect,preview
+
+"}
+
+"Neosnippet {
+let g:deoplete#enable_at_startup = 1
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+"}
+
+"python-lsp-server {
+" https://github.com/palantir/python-language-server
+" pip install 'python-language-server[all]'
+
+"}}
+
 " LSP Servers {
 " https://github.com/mattn/vim-lsp-settings
 let g:lsp_preview_max_height = 5
+let g:lsp_settings_root_markers = [
+            \   '.git',
+            \   '.git/',
+            \   '.svn',
+            \   '.hg',
+            \   '.bzr',
+            \   '.root'
+            \]
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete

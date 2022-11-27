@@ -6,5 +6,6 @@ let g:spf13_noninvasive_completion = 1
 let g:spf13_no_conceal = 1
 
 if !exists("g:spf13_bundle_groups")
-    let g:spf13_bundle_groups=['writing', 'general',  'youcompleteme', 'programming', 'ruby', 'python', 'javascript', 'html', 'go']
+    "let g:spf13_bundle_groups=['writing', 'general',  'youcompleteme', 'programming', 'ruby', 'python', 'javascript', 'html', 'go']
+    let g:spf13_bundle_groups=['writing', 'general',  'programming', 'ruby', 'python', 'javascript', 'html', 'go']
 endif
