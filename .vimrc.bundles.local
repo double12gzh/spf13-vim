@@ -1,3 +1,0 @@
-Bundle 'rust-lang/rust.vim'
-Bundle 'prabirshrestha/vim-lsp'
-Bundle 'mattn/vim-lsp-settings'
